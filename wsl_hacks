@@ -4,3 +4,14 @@ https://github.com/microsoft/WSL/issues/4150
 port forwarding
 jupyter notebook --no-browser --port=XXXX
 
+#Updated awesome method
+#keep this in .ssh/config
+Host notebooks
+    HostName host
+    User myuser
+    LocalForward YYYY localhost:XXXX
+
+just run ssh notebooks
+create an alias jl='jupyter notebook --no-browser --port=YYYY'
+run jl
+open browser and run localhost:XXXX , bam there you go.
